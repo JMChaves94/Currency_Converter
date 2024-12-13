@@ -11,23 +11,24 @@
   <div class="container">
     <h1>Currency Converter</h1>
     <form id="currency-form">
-      <select id="from-currency" required>
-        <option value="">From Currency</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="ARS">ARS</option>
-        <!-- Agrega más monedas según el API -->
-      </select>
-      <select id="to-currency" required>
-        <option value="">To Currency</option>
-        <option value="USD">USD</option>
-        <option value="EUR">EUR</option>
-        <option value="ARS">ARS</option>
-      </select>
+        <select id="from-currency" required>
+            <option value="" disabled selected>From Currency</option>
+            <!-- Las opciones se generarán desde el script -->
+        </select>
+        <select id="to-currency" required>
+            <option value="" disabled selected>To Currency</option>
+            <!-- Las opciones se generarán desde el script -->
+        </select>
+        
       <input type="number" id="amount" placeholder="Amount" required>
       <button type="submit">Convert</button>
     </form>
     <div class="result" id="result"></div>
+  </div>
+
+  <div id="history">
+    <h2>Conversion History</h2>
+    <ul id="conversion-history"></ul>
   </div>
 
   <script src="script.js"></script>
